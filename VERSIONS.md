@@ -8,3 +8,17 @@
 - Создан файл **/pages/ToDoList.tsx**
 
 Командой ```npm i sass -save-dev``` в проект установлен пре-процессор SASS
+
+# commit 1.3.1 
+
+- Создана четка архитектура проекта
+- Верстка разбита на компоненты
+
+```
+src/assets/images
+src/assets/scss
+src/components/Form
+src/components/Header
+src/components/ToDoList
+src/components/ToDoList/ToDoListItem
+```
