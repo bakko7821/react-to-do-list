@@ -22,3 +22,7 @@ src/components/Header
 src/components/ToDoList
 src/components/ToDoList/ToDoListItem
 ```
+
+# commit 1.4.1
+
+- Добавленна логика создания, выполнения и удаления задач
