@@ -3,3 +3,7 @@ export interface ToDo {
     text: string
     isDone: boolean
 }
+
+export interface ToDoProps {
+    todos: ToDo[]
+}
