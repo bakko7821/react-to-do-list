@@ -4,33 +4,28 @@ import './assets/scss/normalize.scss';
 import './assets/scss/style.scss';
 import { ToDoListPage } from './pages/ToDoListPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HomePage } from './pages/HomePage';
+import { ViewList } from './pages/ViewList';
 import { Header } from './components/Header/Header';
-import { ToDo } from './models/todo-item';
 import { NotFound } from './pages/404';
-import { ItemDescription } from './pages/ItemDescription';
-
-const todos: ToDo[] = [
-  {id: 0, text: "Первое действие", isDone: false},
-  {id: 1, text: "Второе действие", isDone: true},
-  {id: 2, text: "Третье действие", isDone: false},
-  {id: 3, text: "Четвёртое действие", isDone: true},
-  {id: 4, text: "Пятое действие", isDone: false},
-]
+import { ViewListItem } from './pages/ViewListItem';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path='/' element={<HomePage todos={todos}/>}></Route>
-        <Route path='/list/:id' element={<ItemDescription todos={todos}/>}></Route>
-        <Route path='*' element={<NotFound />}></Route>
-        <Route path='/todo' element={<ToDoListPage />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path='/' element={<ViewList />}></Route>
+          <Route path='/list/:id' element={<ViewListItem />}></Route>
+          <Route path='*' element={<NotFound />}></Route>
+          <Route path='/todo' element={<ToDoListPage />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

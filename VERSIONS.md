@@ -33,3 +33,9 @@ src/components/ToDoList/ToDoListItem
 ``` npm -i react-router-dom```
 - Добавлена маршрутизация
 - Создан компонент ListItem.tsx
+
+# commit 1.6.1 [LESSON №5]
+
+- Установленна библиотека Redux/Toolkit
+```npm install @reduxjs/toolkit react-redux```
+- Созданы файлы **store.ts**, **/feature/ToDoList.ts**, **/helpers/storage.ts/**
