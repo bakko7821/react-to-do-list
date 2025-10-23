@@ -39,3 +39,10 @@ src/components/ToDoList/ToDoListItem
 - Установленна библиотека Redux/Toolkit
 ```npm install @reduxjs/toolkit react-redux```
 - Созданы файлы **store.ts**, **/feature/ToDoList.ts**, **/helpers/storage.ts/**
+
+# commit 1.7.1 [LESSON №6]
+
+- Установленна библиотека Styled Components
+```npm install styled-components``
+
+- **Form.scss** и **ToDoListItem.scss** - заменены на **Form.styled.ts** и **ToDoListItem.styles.ts**
